@@ -1,4 +1,4 @@
-The sign-up/login page won't work, and the movie playing option doesn't work.
+The sign-up/login page and the movie playing option isn't working.
 Everything else will work fine.
 
 Website link : https://vavmovies.netlify.app/
