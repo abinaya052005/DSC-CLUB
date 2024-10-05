@@ -1,0 +1,275 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    color: #ff2e63;
+    font-size: 1.5em;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: #ffcc00;
+}
+
+header .banner {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+header input[type="text"],
+header .genre-select {
+    padding: 0.5em;
+    border-radius: 25px;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    transition: border 0.3s;
+    width: 250px;
+}
+
+header input[type="text"]:focus,
+header .genre-select:focus {
+    outline: none;
+    border: 2px solid #ffcc00;
+}
+
+header .action-btn {
+    background-color: #ff2e63;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+header .action-btn:hover {
+    background-color: #e0294d;
+    transform: scale(1.05);
+}
+
+/* Navigation */
+nav {
+    text-align: center;
+    margin: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: white;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* Movie Gallery */
+#movie-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #0d0d0d;
+}
+
+.movie {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.movie img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.movie h3 {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #ffcc00;
+}
+
+.movie:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 204, 0, 0.5);
+}
+
+/* Movie Details Overlay */
+.movie-details-overlay {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 200;
+}
+
+.movie-details {
+    display: flex;
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+    width: 80%;
+    max-width: 900px;
+}
+
+.movie-details img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.details-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.details-info h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8em;
+    color: #ffcc00;
+}
+
+.details-cast {
+    margin-top: 10px;
+    color: #fff;
+}
+
+.movie-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.emoji-btn {
+    font-size: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffcc00;
+    transition: transform 0.3s;
+}
+
+.emoji-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #1c1c1c;
+    color: #ffcc00;
+    position: relative;
+    width: 100%;
+}
+
+/* Search Bar */
+#search-bar {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    margin: 20px auto;
+    display: block;
+    background-color: #333;
+    color: #fff;
+    width: 60%;
+    transition: all 0.3s ease;
+}
+
+#search-bar:focus {
+    outline: none;
+    background-color: #444;
+}
+
+/* Genre Dropdown */
+#genre-select {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+#genre-select:focus {
+    outline: none;
+    background-color: #444;
+}
+
+/* Cast Section */
+.details-cast h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+#cast-info {
+    font-size: 1em;
+    color: #fff;
+}
+
+/* Terms and Conditions */
+.terms-and-conditions {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #ccc;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ffcc00;
+}
+
+.terms-and-conditions a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.terms-and-conditions a:hover {
+    color: #fff;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VAV Movies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1><a href="#home" style="color: #ff2e63; text-decoration: none;">VAV Movies🎬</a></h1>
+        <div class="banner">
+            <select id="genre-select" class="genre-select">
+                <option value="">🎭 Select Genre</option>
+            </select>
+            <input type="text" id="search-bar" placeholder="🔍 Search for movies...">
+            <button id="sign-in" class="action-btn">Sign In</button>
+            <button id="register" class="action-btn">Register</button>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#tv-shows" id="tv-shows-link">📺 TV-Shows</a>
+        <a href="#movies" id="movies-link">🎥 Movies</a>
+    </nav>
+
+    <h2>Recently Hit Movies You Might Like</h2>
+    <section id="movie-gallery" class="movie-gallery"></section>
+
+    <!-- Full Movie Details Container -->
+    <div id="movie-details-overlay" class="movie-details-overlay" style="display:none;">
+        <div class="movie-details">
+            <img id="details-poster" src="" alt="">
+            <div class="details-info">
+                <h2 id="details-title"></h2>
+                <p id="details-description"></p>
+
+                <!-- Cast Information Section -->
+                <div id="details-cast" class="details-cast" style="display: none;">
+                    <h3>Cast</h3>
+                    <p id="cast-info"></p>
+                </div>
+
+                <!-- New Buttons with Emojis and Tooltip -->
+                <div class="movie-buttons">
+                    <button class="emoji-btn" id="watch-movie-btn" title="Watch Movie">🎥</button>
+                    <button class="emoji-btn" id="watch-trailer-btn" title="Watch Trailer">🎞️</button>
+                    <button class="emoji-btn" id="cast-btn" title="Movie Cast">👥</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>By accessing this website, you agree to the following terms and conditions:</p>
+        <ul>
+            <li>This website aggregates movie information from third-party sources and does not host or provide streaming services directly.</li>
+            <li>All movies and TV shows linked on this website are hosted by external video streaming platforms.</li>
+            <li>The website is not responsible for the content, accuracy, legality, or decency of material hosted on third-party sites.</li>
+            <li>Users must be 18 years or older to access certain content as per legal and content-rating regulations.</li>
+            <li>We reserve the right to modify these terms at any time. Continued usage of the website means you accept any updates to the terms.</li>
+        </ul>
+        <p>&copy; 2024 VAV Movies. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
